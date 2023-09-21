@@ -16,6 +16,6 @@ jobs:
           echo "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
           git fetch 
           git checkout zeme-test
-          echo "$(git merge-base HEAD origin/main)"
-          echo "$(git rev-parse --short HEAD)"
+          echo MERGEBASE "$(git merge-base HEAD origin/main)"
+          echo REVPARSE "$(git rev-parse --short HEAD)"
                 
