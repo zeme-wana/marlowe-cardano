@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 5 
       - run: | 
           echo "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
           git fetch 
@@ -19,3 +21,6 @@ jobs:
           echo MERGEBASE "$(git merge-base HEAD origin/main)"
           echo REVPARSE "$(git rev-parse --short HEAD)"
                 
+
+
+# git checkout main ; git add . ; git commit -m wip ; git push ; git checkout zeme-test ; git pull --rebase origin main ; git push -f
